@@ -2,7 +2,7 @@ FROM php:7.4-fpm
 
 # composer のダウンロード用
 RUN apt-get update \
-  && apt-get install -y zlib1g-dev \
+  && apt-get install -y zip unzip \
   && docker-php-ext-install zip
 
 # install composer
