@@ -28,6 +28,9 @@ RUN apt-get update \
 # Node.js のインストール
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
   && apt-get update \
-  && apt-get install -y nodejs
+  && apt-get install -y nodejs npm \
+  && npm install n -g \
+  && n stable \
+  && apt purge -y nodejs npm
 
 WORKDIR /var/www/html
