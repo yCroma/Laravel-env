@@ -50,6 +50,5 @@ services:
       - TZ=${TZ}
 
 volumes: 
-  db-store:
   #vendor-volume:
   #storage-volume:
