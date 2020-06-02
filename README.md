@@ -25,3 +25,6 @@ Laravelの開発環境を作る、自分用のDocker-composeフォルダを作�
 - フォルダ毎にデータベースを分けてmigrateすることができます
 - マウントが遅くなってきた場合、`docker-compose.yml`のコメントアウトを外すと改善されると思います
 - `.env`ファイル内の`APP_NAME`を設定することによって、複数環境を保持することができます
+
+## 記事
+[Docker-composeでLaravel、Nginx、MySQLのローカル開発環境を作る](https://qiita.com/yCroma/items/bf2fe08580f332d7560b)
