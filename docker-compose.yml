@@ -1,6 +1,7 @@
 version: '3'
 services: 
     # .env 内のAPP_NAMEを設定してください
+    
   web:
     container_name: ${APP_NAME}-web
     image: nginx:1.15.6
@@ -21,8 +22,8 @@ services:
     volumes: 
       - ./src:/var/www/html
       - ./logs:/var/log/php
-      #- vendor-volume:/var/www/html/${APP_NAME}/vendor
-      #- storage-volume:/var/www/html/${APP_NAME}/storage
+       #- vendor-volume:/var/www/html/${APP_NAME}/vendor
+       #- storage-volume:/var/www/html/${APP_NAME}/storage
     working_dir: /var/www/html
     environment: 
       - DB_CONNECTION=mysql
@@ -40,7 +41,7 @@ services:
     ports: 
       - "3306:3306"
     volumes: 
-      - ./db-store:/var/lib/mysql
+      - db-store:/var/lib/mysql
       - ./logs:/var/log/mysql
     environment: 
       - MYSQL_DATABASE=${DB_NAME}
@@ -50,5 +51,6 @@ services:
       - TZ=${TZ}
 
 volumes: 
+  db-store:
   #vendor-volume:
   #storage-volume:
